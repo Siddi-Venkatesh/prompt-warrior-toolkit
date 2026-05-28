@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Warrior Toolkit</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background elements -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    
+    <div class="container glass-panel">
+        <header>
+            <h1><span class="gradient-text">Prompt Warrior</span> Toolkit</h1>
+            <p>Generate highly-optimized, advanced AI prompts instantly.</p>
+        </header>
+
+        <main>
+            <div class="form-group">
+                <label for="role">AI Role / Persona</label>
+                <select id="role">
+                    <option value="" disabled selected>-- Select an AI Role --</option>
+                    <option value="Expert Developer">Expert Developer</option>
+                    <option value="Python Developer">Python Developer</option>
+                    <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+                    <option value="Deep Learning Researcher">Deep Learning Researcher</option>
+                    <option value="AI Scientist">AI Scientist</option>
+                    <option value="Creative Copywriter">Creative Copywriter</option>
+                    <option value="Data Analyst">Data Analyst</option>
+                    <option value="System Architect">System Architect</option>
+                    <option value="UI/UX Designer">UI/UX Designer</option>
+                    <option value="SEO Specialist">SEO Specialist</option>
+                    <option value="Cyber Security Expert">Cyber Security Expert</option>
+                    <option value="Prompt Engineer">Prompt Engineer</option>
+                    <option value="Product Manager">Product Manager</option>
+                    <option value="Custom Entity">Custom Entity</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="task">Core Problem / Objective</label>
+                <textarea id="task" placeholder="e.g., Build a python script to automate data entry..." rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="context">Environment & Context (Optional)</label>
+                <textarea id="context" placeholder="e.g., Running on Windows, Python 3.10, using pandas..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="expected_output">Expected Output (Optional)</label>
+                <textarea id="expected_output" placeholder="e.g., A complete python script, a JSON file, a bulleted list..." rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="technique">Prompting Technique</label>
+                <select id="technique">
+                    <option value="" disabled selected>-- Select a Prompting Technique --</option>
+                    <option value="Chain of Thought">Chain of Thought (Step-by-step reasoning)</option>
+                    <option value="Few-Shot">Few-Shot (Provide examples format)</option>
+                    <option value="Roleplay">Roleplay Intensive (Strict character bounds)</option>
+                    <option value="Zero-Shot">Zero-Shot (Direct and concise)</option>
+                    <option value="Tree of Thoughts">Tree of Thoughts (Explore multiple paths)</option>
+                    <option value="Self-Reflection">Self-Reflection (Analyze and correct)</option>
+                    <option value="Meta-Prompting">Meta-Prompting (Strict system rules)</option>
+                    <option value="Context-Driven">Context-Driven (Strictly base on context)</option>
+                    <option value="Socratic Method">Socratic Method (Ask clarifying questions)</option>
+                </select>
+            </div>
+
+            <button id="generateBtn" class="primary-btn">Generate Master Prompt</button>
+
+            <div class="output-section hidden" id="outputSection">
+                <label>Your Master Prompt:</label>
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <button id="copyBtn" class="copy-btn">Copy</button>
+                    </div>
+                    <textarea id="output" readonly></textarea>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
